@@ -7,9 +7,10 @@ $(function(){
 //      restURL += landCode; // directly to the REST API
       
       var ajaxCall =$.ajax({
-//          url: restURL,
-          url: "/AjaxExsamEx/SimpleServlet",
-          method: "GET",
+//          url: restURL, // For going Straight There!
+          url: "/AjaxExsamEx/SimpleServlet", // For Go to proxy
+//          method: "GET", // FOR Going Straight There
+            method:"POST", // For Going to Proxy
           data: landCode
       });
       ajaxCall.done(function(data,status){

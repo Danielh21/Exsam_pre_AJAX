@@ -86,6 +86,8 @@ public class SimpleServlet extends HttpServlet {
             
             BufferedReader re = request.getReader();
             String landCode = re.readLine();
+            String splitted[] = landCode.split("-");
+            landCode = splitted[0];
             String url = "http://restcountries.eu/rest/v1/alpha?codes=";
             url += landCode;
             response.sendRedirect(url);
